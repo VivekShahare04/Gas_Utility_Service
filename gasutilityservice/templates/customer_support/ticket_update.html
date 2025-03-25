@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Manage Support Ticket</h4>
+                </div>
+                <div class="card-body">
+                    <div class="mb-4">
+                        <h5>Request Information</h5>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><strong>Customer:</strong> {{ service_request.customer.get_full_name }}</p>
+                                <p><strong>Request Type:</strong> {{ service_request.get_request_type_display }}</p>
+                                <p><strong>Priority:</strong> 
+                                    <span class="badge badge-{{ service_request.get_priority_class }}">
+                                        {{ service_request.get_priority_display }}
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><strong>Status:</strong> 
+                                    <span class="badge badge-{{ service_request.get_status_class }}">
+                                        {{ service_request.get_status_display }}
+                                    </span>
+                                </p>
+                                <p><strong>Submitted:</strong> {{ service_request.submitted_at|date:"M d, Y H:i" }}</p>
+                                {% if service_request.resolved_at %}
+                                <p><strong>Resolved:</strong> {{ service_request.resolved_at|date:"M d, Y H:i" }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <p><strong>Description:</strong> {{ service_request.description }}</p>
+                    </div>
+                    
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="form-group mt-4">
+                            <button type="submit" class="btn btn-primary">Update Ticket</button>
+                            <a href="{% url 'customer_support:dashboard' %}" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
