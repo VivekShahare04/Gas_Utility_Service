@@ -33,6 +33,12 @@ def login_view(request):
 def account_landing(request):
     return render(request, 'accounts/landing.html')
 
+def home(request):
+    if request.user.is_authenticated:
+        if request.user.is_support_rep:
+            return redirect('customer_support:dashboard')
+        return redirect('service_requests:dashboard')
+    return redirect('accounts:login')
 @login_required
 def logout_view(request):
     logout(request)

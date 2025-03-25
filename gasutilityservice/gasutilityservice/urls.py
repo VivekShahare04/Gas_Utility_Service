@@ -18,14 +18,17 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-from . import views
+from .views import home
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('requests/', include('service_requests.urls', namespace='service_requests')),
     path('support/', include('customer_support.urls', namespace='customer_support')),
-    path('', views.home, name='home'), 
+    # path('',home)
+    path('', RedirectView.as_view(url='accounts/login/')),
+
 ]
 
 if settings.DEBUG:
