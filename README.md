@@ -9,70 +9,13 @@ The **Gas Utility Service** is a Django-based web application designed to manage
 
 Below is the structure of the Django application:
 
-gasutilityservice/                # Root project directory
-├── config/                      # Main Django project configuration
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py                  # Main URL routing
-│   └── wsgi.py
-│
-├── apps/                        # All Django applications
-│   ├── accounts/                # User authentication app
-│   │   ├── migrations/
-│   │   ├── __init__.py
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── forms.py            # Registration/login forms
-│   │   ├── models.py           # Custom User model
-│   │   ├── urls.py             # Account-related URLs
-│   │   └── views.py            # Authentication views
-│   │
-│   ├── service_requests/        # Customer service requests app
-│   │   ├── migrations/
-│   │   ├── __init__.py
-│   │   ├── admin.py
-│   │   ├── apps.py
-│   │   ├── forms.py            # Service request forms
-│   │   ├── models.py           # ServiceRequest model
-│   │   ├── urls.py             # Request-related URLs
-│   │   └── views.py            # Request handling views
-│   │
-│   └── customer_support/       # Support representative tools
-│       ├── migrations/
-│       ├── __init__.py
-│       ├── admin.py
-│       ├── apps.py
-│       ├── forms.py            # Support ticket forms
-│       ├── models.py           # SupportTicket model
-│       ├── urls.py             # Support-related URLs
-│       └── views.py            # Support dashboard views
-│
-├── templates/                  # Base templates directory
-│   ├── base.html               # Main template
-│   ├── accounts/
-│   │   ├── landing.html        # Account landing page
-│   │   ├── login.html          # Login form
-│   │   └── register.html       # Registration form
-│   ├── service_requests/
-│   │   ├── request_create.html # New request form
-│   │   ├── request_detail.html # Request details
-│   │   ├── request_list.html   # All requests view
-│   │   └── request_update.html # Request update form
-│   └── customer_support/
-│       ├── dashboard.html      # Support dashboard
-│       ├── request_detail.html # Support view of request
-│       └── ticket_update.html # Ticket management
-│
-├── static/                     # Static files
-│   ├── css/
-│   │   └── style.css           # Custom CSS
-│   └── js/                     # (Optional JavaScript files)
-│
-├── media/                      # User-uploaded files (created automatically)
-│   └── service_request_attachments/  # Request attachments
-│
-├── manage.py                   # Django management script
-└── requirements.txt            # Python dependencies
+![Project Structure](path/to/your/image.png)
+
+Replace `path/to/your/image.png` with the actual relative path to the image file in your repository. For example, if the image is saved in the root directory of your project, you can use:
+
+```markdown
+![Project Structure](project_structure.png)
+```
 
 ---
 
@@ -146,7 +89,6 @@ Admin Panel: Full control over users and data.
 **Technologies Used**
 Backend: Django
 Frontend: HTML, CSS, Bootstrap
-Database: SQLite
 Authentication: Django's built-in authentication system
 
 
