@@ -9,12 +9,12 @@ The **Gas Utility Service** is a Django-based web application designed to manage
 
 Below is the structure of the Django application:
 
-![Project Structure]("C:\Users\Vivek Shahare\Pictures\Screenshots\Screenshot 2025-03-27 161002.png")
+![Project Structure](assets/project_structure.png)
 
 Replace `path/to/your/image.png` with the actual relative path to the image file in your repository. For example, if the image is saved in the root directory of your project, you can use:
 
 ```markdown
-![Project Structure]("C:\Users\Vivek Shahare\Pictures\Screenshots\Screenshot 2025-03-27 161002.png")
+![Project Structure](assets/project_structure.png)
 ```
 
 ---
