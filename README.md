@@ -126,7 +126,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ## 📧 Contact
 
 For any inquiries or feedback, feel free to reach out:
-- **Email**: vivekshahare23@example.com
+- **Email**: vivekshahare23@gmail.com
 - **GitHub**: [VivekShahare04](https://github.com/VivekShahare04)
 
 ---
